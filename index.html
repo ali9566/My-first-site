@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحه ساده</title>
+    <title>شمارنده ساده</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #counter {
+            font-size: 50px;
+            color: blue;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>سلام! این یک صفحه ساده است</h1>
-    <p>این صفحه فقط با HTML ساخته شده است و هیچ‌گونه ویژگی تعاملی ندارد.</p>
-    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="تصویر از W3Schools">
+    <h1>شمارنده لمس</h1>
+    <div id="counter">0</div>
+    <button onclick="increaseCounter()">لمس کنید</button>
+
+    <script>
+        let count = 0;  // متغیر شمارنده
+
+        function increaseCounter() {
+            count++;  // شمارنده را افزایش می‌دهیم
+            document.getElementById("counter").textContent = count;  // نمایش تعداد شمارنده
+        }
+    </script>
 </body>
 </html>
