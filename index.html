@@ -3,36 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شمارنده ساده</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        #counter {
-            font-size: 50px;
-            color: green;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+    <title>تغییر رنگ پس‌زمینه</title>
 </head>
 <body>
-    <h1>شمارنده لمس</h1>
-    <div id="counter">0</div>
-    <button onclick="increaseCounter()">افزایش شمارنده</button>
+    <h1>تغییر رنگ پس‌زمینه با دکمه</h1>
+    <button onclick="changeBackgroundColor()">تغییر رنگ</button>
 
     <script>
-        let count = 0;  // متغیر شمارنده
-
-        function increaseCounter() {
-            count++;  // شمارنده را افزایش می‌دهیم
-            document.getElementById("counter").innerHTML = count;  // نمایش تعداد شمارنده
+        function changeBackgroundColor() {
+            // رنگ‌های تصادفی برای پس‌زمینه
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F7D033', '#FF33A8'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
         }
     </script>
 </body>
